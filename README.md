@@ -38,8 +38,8 @@ Will be "successed" or "failed"
 uses: ckylinmc/minio-upload-action@v1.1
 with:
   endpoint: 'https://some.minio.obj'
-  accesskey: ${{secret.MINIO_AK}}
-  secretkey: ${{secret.MINIO_SK}}
+  accesskey: ${{secrets.MINIO_AK}}
+  secretkey: ${{secrets.MINIO_SK}}
   bucketname: 'common'
   source: './artifact.zip'
   dest: '/cache/artifact.zip'

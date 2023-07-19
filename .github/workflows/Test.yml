@@ -1,0 +1,22 @@
+on: 
+    push:
+    workflow_dispatch:
+
+jobs:
+  TestOnUbuntu:
+    runs-on: ubuntu-latest
+    name: Test if action could run on ubuntu
+    steps:
+      - name: Try upload
+        id: upload
+        uses: ckylinmc@minio-upload-action@v1.1
+        with:
+          endpoint: ${{ secrets.ENDPOINT }}
+          accesskey: ${{ secrets.MINIO_AK }}
+          secretkey: ${{ secrets.MINIO_SK }}
+          bucketname: '${{ secrets.BKNAME }}
+          source: './index.js'
+          dest: '/action-test/index.js'
+      # Use the output from the `hello` step
+      - name: Get the output status
+        run: echo "The status was ${{ steps.upload.outputs.status }}"
