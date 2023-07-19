@@ -1,6 +1,7 @@
+name: Test Action
 on: 
-    push:
-    workflow_dispatch:
+  push:
+  workflow_dispatch:
 
 jobs:
   TestOnUbuntu:
