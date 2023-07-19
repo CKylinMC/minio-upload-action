@@ -35,7 +35,7 @@ Will be "successed" or "failed"
 ## Example
 
 ```yaml
-uses: ckylinmc/minio-upload-action@main
+uses: ckylinmc/minio-upload-action@v1.0
 with:
   endpoint: 'https://some.minio.obj'
   accesskey: ${{secret.MINIO_AK}}
