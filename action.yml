@@ -1,0 +1,41 @@
+name: 'Minio Upload'
+description: 'Upload any files to your MinIO storage.'
+inputs:
+  endpoint:
+    description: 'MinIO endpoint'
+    required: true
+    default: ''
+  port:
+    description: 'Custom port number, default set to 443.'
+    # required: true
+    default: '443'
+  accesskey:
+    description: 'AccessKey of your MinIO storage.'
+    required: true
+    default: ''
+  secretkey:
+    description: 'SecretKey of your MinIO storage.'
+    required: true
+    default: ''
+  bucketname:
+    description: 'Name of your bucket'
+    required: true
+    default: 'common'
+  usessl:
+    description: 'Set this value to true to enable secure (HTTPS) access'
+    # required: true
+    default: true
+  source:
+    description: 'Path to files you want to upload.'
+    required: true
+    default: '.'
+  dest:
+    description: 'Path to file you want upload to. (Target FILE name!)'
+    required: true
+    default: '/'
+outputs:
+  status: # id of output
+    description: 'Will be "successed" or "failed"'
+runs:
+  using: 'node16'
+  main: 'index.js'

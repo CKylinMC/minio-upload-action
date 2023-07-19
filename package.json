@@ -1,0 +1,17 @@
+{
+  "name": "minio-upload-action",
+  "version": "1.0.0",
+  "description": "A simple upload action using minio javascript package without docker to run on both Linux and Windows.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "minio": "^7.1.1"
+  }
+}
