@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Try upload
         id: upload
-        uses: CKylinMC@minio-upload-action@v1.1
+        uses: ./
         with:
           endpoint: ${{ secrets.ENDPOINT }}
           accesskey: ${{ secrets.MINIO_AK }}
