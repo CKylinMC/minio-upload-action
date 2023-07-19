@@ -25,7 +25,7 @@ jobs:
         run: echo "The status was ${{ steps.upload.outputs.status }}"
   TestOnWindows:
     runs-on: windows-x64
-    name: Test if action could run on ubuntu
+    name: Test if action could run on Windows
     steps:
       - name: Checkout
         uses: actions/checkout@v3
