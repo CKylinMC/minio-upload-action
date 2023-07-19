@@ -1,4 +1,7 @@
 # minio-upload-action
+
+[![Test on Ubuntu and Windows](https://github.com/CKylinMC/minio-upload-action/actions/workflows/Test.yml/badge.svg)](https://github.com/CKylinMC/minio-upload-action/actions/workflows/Test.yml)
+
 A simple upload action using minio javascript package without docker to run on both Linux and Windows.
 
 ## Inputs
@@ -40,7 +43,7 @@ with:
   endpoint: 'some.minio.obj.com'
   accesskey: ${{secrets.MINIO_AK}}
   secretkey: ${{secrets.MINIO_SK}}
-  bucketname: 'common'
+  bucketname: 'your_bucket_name'
   source: './artifact.zip'
   dest: '/cache/artifact.zip'
 ```
