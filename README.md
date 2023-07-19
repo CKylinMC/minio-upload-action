@@ -37,7 +37,7 @@ Will be "successed" or "failed"
 ```yaml
 uses: ckylinmc/minio-upload-action@v1.1
 with:
-  endpoint: 'https://some.minio.obj'
+  endpoint: 'some.minio.obj.com'
   accesskey: ${{secrets.MINIO_AK}}
   secretkey: ${{secrets.MINIO_SK}}
   bucketname: 'common'

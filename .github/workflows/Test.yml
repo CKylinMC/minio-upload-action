@@ -19,7 +19,26 @@ jobs:
           secretkey: ${{ secrets.MINIO_SK }}
           bucketname: ${{ secrets.BKNAME }}
           source: './index.js'
-          dest: '/action-test/index.js'
+          dest: '/action-test/test-ubuntu.js'
+      # Use the output from the `hello` step
+      - name: Get the output status
+        run: echo "The status was ${{ steps.upload.outputs.status }}"
+  TestOnWindows:
+    runs-on: windows-x64
+    name: Test if action could run on ubuntu
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Try upload
+        id: upload
+        uses: ./
+        with:
+          endpoint: ${{ secrets.ENDPOINT }}
+          accesskey: ${{ secrets.MINIO_AK }}
+          secretkey: ${{ secrets.MINIO_SK }}
+          bucketname: ${{ secrets.BKNAME }}
+          source: './index.js'
+          dest: '/action-test/test-windows.js'
       # Use the output from the `hello` step
       - name: Get the output status
         run: echo "The status was ${{ steps.upload.outputs.status }}"
