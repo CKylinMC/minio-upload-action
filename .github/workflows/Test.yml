@@ -15,7 +15,7 @@ jobs:
           endpoint: ${{ secrets.ENDPOINT }}
           accesskey: ${{ secrets.MINIO_AK }}
           secretkey: ${{ secrets.MINIO_SK }}
-          bucketname: '${{ secrets.BKNAME }}
+          bucketname: ${{ secrets.BKNAME }}
           source: './index.js'
           dest: '/action-test/index.js'
       # Use the output from the `hello` step
