@@ -1,5 +1,9 @@
-name: 'Minio Upload'
+name: 'Minio Upload without Docker'
 description: 'Upload any files to your MinIO storage.'
+author: 'CKylinMC'
+branding:
+  icon: 'upload-cloud'
+  color: 'green'
 inputs:
   endpoint:
     description: 'MinIO endpoint'
@@ -7,7 +11,6 @@ inputs:
     default: ''
   port:
     description: 'Custom port number, default set to 443.'
-    # required: true
     default: '443'
   accesskey:
     description: 'AccessKey of your MinIO storage.'
@@ -23,7 +26,6 @@ inputs:
     default: 'common'
   usessl:
     description: 'Set this value to true to enable secure (HTTPS) access'
-    # required: true
     default: true
   source:
     description: 'Path to files you want to upload.'
@@ -34,7 +36,7 @@ inputs:
     required: true
     default: '/'
 outputs:
-  status: # id of output
+  status:
     description: 'Will be "successed" or "failed"'
 runs:
   using: 'node16'
