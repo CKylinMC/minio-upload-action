@@ -24,7 +24,7 @@ jobs:
       - name: Get the output status
         run: echo "The status was ${{ steps.upload.outputs.status }}"
   TestOnWindows:
-    runs-on: windows-x64
+    runs-on: windows-latest
     name: Test if action could run on Windows
     steps:
       - name: Checkout
